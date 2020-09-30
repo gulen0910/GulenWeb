@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta http-equiv="CONTENT-TYPE" content="text/html; charset=utf-8">
+        <title>WebGazer デモ</title>
+        <script type="text/javascript" src="https://drive.google.com/file/d/1xqvLolVodLop0biXygMoTtY7pSbX_bnI/view?usp=sharing"></script>
+    </head>
+    <body>
+        <script>
+            webgazer.setGazeListener(function(data, elapsedTime) {
+                if (data == null) {
+                    return;
+                }
+                var xprediction = data.x;
+                var yprediction = data.y;
+                console.log(elapsedTime);
+            }).begin();
+        </script>
+    </body>
+</html>
