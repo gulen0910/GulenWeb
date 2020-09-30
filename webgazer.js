@@ -63737,7 +63737,6 @@ const kernelConfigs = [
 for (const kernelConfig of kernelConfigs) {
     Object(dist["registerKernel"])(kernelConfig);
 }
-//# sourceMappingURL=register_all_kernels.js.map
 // CONCATENATED MODULE: ./node_modules/@tensorflow/tfjs-backend-webgl/dist/webgl.js
 /**
  * @license
