@@ -11,6 +11,8 @@
         <script>
           var Time = new Date();
           var SaveData =Time.getHours() + ":" +Time.getMinutes() +":" +Time.getSeconds() +":" +Time.getMilliseconds() +" " + " x  y\n"
+          var applyKalmanFilter =true
+          var saveDataAcrossSessions = true;
           webgazer.params.showVideo = false;
           webgazer.params.mirrorVideo= false;
           webgazer.params.showFaceOverlay= false;
