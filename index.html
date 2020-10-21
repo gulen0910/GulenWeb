@@ -3,6 +3,7 @@
 <meta http-equiv="CONTENT-TYPE" content="text/html; charset=utf-8"
     <head>
         <title>WebGazer デモ</title>
+        <script src="./jquery-1.7.1.min.js"></script>
         <script src="./webgazer.js?" type="text/javascript"></script>
     </head>
     <body>
@@ -18,5 +19,14 @@
                 console.log(elapsedTime);
             }).begin();
         </script>
+        <div id="contents_sample_wrap">
+            <ul>
+                <li class="text_box">ボタンを押すとテキストが変わります</li>
+            </ul>
+            <input type="button" value="テキストを変更" id="count" /><!--クリックしたときにtext()
+            を実行-->
+            <input type="button" value="出力！" id="export" />
+            <a id="download" target="_blank">ダウンロード（IEでは、右クリック＞対象をファイルに保存）</a>
+        </div>
     </body>
 </html>
