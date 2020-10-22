@@ -11,7 +11,7 @@
     <body>
         <script>
           var Time = new Date();
-          var SaveData =Time.getHours() + ":" +Time.getMinutes() +":" +Time.getSeconds() +":" +Time.getMilliseconds() +" " + " x  y\n"
+          var SaveData =Time.getHours() + ":" +Time.getMinutes() +":" +Time.getSeconds() +"." +Time.getMilliseconds() +" " + " x  y  x%  y%\n"
           var applyKalmanFilter =true
           var saveDataAcrossSessions = true;
           webgazer.params.showVideo = false;
@@ -24,12 +24,12 @@
     		if (data == null) {
         		return;
     		}
-    		var xprediction = data.x/window.innerWidth*100; //these x coordinates are relative to the viewport
-    		var yprediction = data.y/window.innerHeight*100; //these y coordinates are relative to the viewport
+    		var xprediction = data.x; //these x coordinates are relative to the viewport
+    		var yprediction = data.y; //these y coordinates are relative to the viewport
         var New_Time=new Date();
         if(New_Time-Time>=1000){
           Time=New_Time;
-          SaveData=SaveData + Time.getHours() + ":" +Time.getMinutes() +":" +Time.getSeconds() +":" +Time.getMilliseconds() +" "+xprediction + "  " + yprediction +"\n";
+          SaveData=SaveData + Time.getHours() + ":" +Time.getMinutes() +":" +Time.getSeconds() +"." +Time.getMilliseconds() +" "+xprediction + "  " + yprediction +"  "+(xprediction/window.innerWidth*100)+"  "+(yprediction/window.innerHeight*100)+"\n";
         }
 		}).begin();
         </script>
